@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hannah.notetaker.ViewNotesActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notes_heading"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textSize="30sp"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"/>
+
+    <RadioGroup android:id="@+id/filter_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <RadioButton android:id="@+id/filter_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/subject_no_ellipses"
+            android:textColor="@color/colorAccent"
+            android:onClick="disableOtherSelection"/>
+        <AutoCompleteTextView  android:id="@+id/subject_entry"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:hint="@string/subject"
+            android:visibility="invisible"
+            android:textSize="15sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="12dp">
+        </AutoCompleteTextView>
+
+        <RadioButton android:id="@+id/filter_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_no_ellipses"
+            android:textColor="@color/colorAccent"
+            android:onClick="disableOtherSelection"/>
+        <AutoCompleteTextView  android:id="@+id/date_entry"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@id/filter_date"
+            android:layout_alignBaseline="@id/filter_date"
+            android:hint="@string/date"
+            android:visibility="invisible"
+            android:textSize="15sp"
+            android:layout_marginBottom="12dp"
+            android:inputType="date" >
+        </AutoCompleteTextView>
+    </RadioGroup>
+
+    <Button android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_group"
+        android:text="@string/search"
+        android:layout_gravity="center"
+        android:textAppearance="@style/ButtonFont"
+        android:background="@drawable/button_background"
+        android:onClick="searchBySelection"/>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_marginStart="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1sp"
+        android:footerDividersEnabled="true"
+        android:textColor="@color/colorAccent"/>
+
+</LinearLayout>

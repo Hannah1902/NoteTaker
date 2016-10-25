@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hannah.notetaker.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark" />
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:src="@drawable/subject_seperator" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_note"
+            android:textSize="25sp"
+            android:layout_marginLeft="21dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_outline_white_36dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end"
+            android:onClick="loadNewNote"
+            />
+    </FrameLayout>
+
+    <!--
+    <Button android:id="@+id/display_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="displayAllNotes"
+        android:text="@string/preview"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"/>
+        -->
+
+    <ToggleButton android:id="@+id/display_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:showText="true"
+        android:visibility="visible"
+        android:checked="true"
+        android:thumbTextPadding="5dp"
+        android:switchMinWidth="23dp"
+        android:textOn="@string/preview"
+        android:textOff="Hide Notes"
+        android:onClick="displayAllNotes" />
+
+    <!--
+    <AutoCompleteTextView android:id="@+id/subject_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display_notes"
+        android:hint="Search by subject..."
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"/>
+
+    <Button android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="searchBySubject"
+        android:text="Search"
+        android:layout_below="@id/subject_search" />
+
+        -->
+
+    <TextView android:id="@+id/notes_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display_notes"
+        android:textSize="18sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorAccent"/>
+
+
+</RelativeLayout>

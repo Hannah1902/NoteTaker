@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NoteTaker</string>
+    <string name="title_activity_new_note">NewNoteActivity</string>
+    <string name="title_activity_view_notes">ViewNotesActivity</string>
+    <string name="subject_prompt">Note Subject: </string>
+    <string name="note_text_hint">Enter text here</string>
+
+    <!--String resources for Main -->
+    <string name="preview">Preview Notes</string>
+
+    <!--String resources for ViewNotes -->
+    <string name="notes_heading">Your Notes</string>
+    <string name="filter">Filter by subject or date</string>
+    <string name="date">Date&#8230;</string>
+    <string name="subject">Subject&#8230;</string>
+    <string name="enter_a_date">Please enter a date</string>
+    <string name="enter_a_subject">Please enter a subject to search</string>
+    <string name="close">Close</string>
+    <string name="search">Search</string>
+    <string name="date_no_ellipses">Date</string>
+    <string name="subject_no_ellipses">Subject</string>
+
+
+    <!--String resources for ShareNotes -->
+    <string name="send_with">Send note with&#8230;</string>
+    <string name="share_your_notes">Select the Note to Share&#8230;</string>
+    <string name="new_note">New Note</string>
+
+    <!--String resources for Menu -->
+    <string name="share_notes">Share</string>
+    <string name="view_notes">View and Search</string>
+    <string name="home_screen">Home Screen</string>
+</resources>
